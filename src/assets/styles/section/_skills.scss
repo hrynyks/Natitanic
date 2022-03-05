@@ -1,0 +1,65 @@
+.skills {
+    padding: 113px;
+    background: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
+    margin-bottom: -1px;
+
+    &__items {
+
+        align-items: stretch;
+
+        &-top {
+            display: grid;
+            grid-template-columns: repeat(4, 270px);
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 30px;
+
+            @include a (laptop) {
+                grid-template-columns: repeat(2, 270px);
+            }
+
+            @include a (tablet) {
+                grid-template-columns: 270px;
+            }
+        }
+
+        &-bot {
+            display: grid;
+            grid-template-columns: repeat(3, 270px);
+            gap: 30px;
+            justify-content: center;
+
+            @include a (tablet-xl) {
+                grid-template-columns: repeat(2, 270px);
+            }
+
+            @include a (tablet) {
+                grid-template-columns: 270px;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 35px;
+        height: 270px;
+        background-color: #2A2A2A;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.47);
+        border-radius: 29px;
+
+        &-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 148px;
+            height: 75px;
+        }
+
+        &-skill {
+            font-size: toRem(24);
+        }
+    }
+}

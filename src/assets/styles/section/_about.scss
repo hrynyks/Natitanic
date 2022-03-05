@@ -1,0 +1,114 @@
+.about {
+    padding: 183px 0 180px;
+    background: linear-gradient(130.68deg, #414141 0%, #2D2D2D 100.52%);
+
+    &-wrap {
+        position: relative;
+    }
+    &__content {
+        max-width: 496px;
+        width: 100%;
+        background-color: #2C2C2C;
+        border-radius: 14px;
+        padding: 63px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    &__title {
+        font-family: 'NEXT ART', sans-serif;
+        font-size: toRem(48);
+        font-weight: 400;
+        position: absolute;
+        top: -27px;
+
+        @include a (tablet-xl) {
+            top: 5px;
+        }
+
+        @include a (tablet) {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__descr {
+        font-size: toRem(20);
+        line-height: 24px;
+        letter-spacing: 0.01em;
+
+        @include a (tablet) {
+            text-align: center;
+        }
+    }
+
+    &__circle {
+        &-left {
+            position: absolute;
+            left: -396px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include a (laptop) {
+                display: none;
+            }
+        }
+
+        &-right {
+            &-top {
+                position: absolute;
+                right: 0;
+                top: -179px;
+
+                @include a (laptop) {
+                    display: none;
+                }
+            }
+
+            &-bot {
+                position: absolute;
+                right: 0;
+                bottom: -244px;
+
+                @include a (laptop) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__image {
+        padding: 29px;
+        background-color: #2C2C2C;
+        border-radius: 14px;
+        position: absolute;
+
+        &-1 {
+            top: -50px;
+            left: -300px;
+
+            @include a (laptop) {
+                display: none;
+            }
+        }
+
+        &-2 {
+            bottom: -50px;
+            left: -300px;
+
+            @include a (laptop) {
+                display: none;
+            }
+        }
+
+        &-3 {
+            right: -300px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include a (laptop) {
+                display: none;
+            }
+        }
+    }
+}

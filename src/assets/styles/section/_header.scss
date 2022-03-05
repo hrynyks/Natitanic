@@ -1,0 +1,42 @@
+.header {
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    z-index: 1;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include a (tablet-xl) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        gap: 145px;
+
+        @include a (tablet) {
+            gap: 75px;
+        }
+
+        @include a (mobile) {
+            gap: 20px;
+        }
+    }
+
+    &__item {
+        &-link {
+            font-size: toRem(18);
+            color: $dark-color;
+            border-bottom: 1px solid transparent;
+
+            &:hover {
+                border-bottom: 1px solid #E2A300;
+            }
+        }
+    }
+}
